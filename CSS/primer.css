@@ -1,0 +1,153 @@
+@import 'primer';
+/* Основные настройки */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Позволяет подвалу оставаться внизу */
+}
+
+
+.container {
+    display: flex;
+    flex: 1; /* Занимает оставшееся место, чтобы подвал был внизу */
+    margin: 20px;
+}
+
+
+/* Стили для заголовка и навигации */
+header {
+    text-align: center;
+    background-color: #2b2d42;
+    color: white;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.navbar-nav {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Горизонтальное расположение */
+}
+
+.navbar-nav li {
+    margin: 0 15px;
+}
+
+.navbar-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 0.3s; /* Анимация при наведении */
+}
+
+.navbar-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px; /* Слегка закруглённые углы при наведении */
+}
+
+/* Стили для сайдбара */
+.sidebar {
+    display: none; /* Скрываем по умолчанию */
+    position: fixed;
+    top: 0; /* Отодвигаем вниз от заголовка */
+    left: 0;
+    font-size: 1.5em;
+    flex: 3;
+    background-color: #3c3a4d;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    height: 100%;
+    width: 20%;
+}
+
+
+.sidebar.active {
+    display: block; /* Показать сайдбар при активации */
+}
+
+.sidebar h3 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f0f0f0; /* Фоновый цвет для пунктов списка */
+    border-left: 5px solid #2b2d42; /* Левый бордер */
+    transition: background-color 0.3s; /* Анимация при наведении */
+}
+
+.sidebar li:hover {
+    background-color: #968bbe; /* Цвет при наведении */
+}
+
+/* Стили для основного контента */
+.content {
+    font-size: 1.3em;
+    margin-left: 22%;
+    flex: 3;
+    background-color: #ffffff;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.content h1 {
+    margin-top: 0;
+}
+
+/* Стили для навигации по страницам */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 8px 12px;
+    background-color: #2b2d42;
+    color: white;
+    text-decoration: none;
+}
+
+.pagination a:hover {
+    background-color: #4c5470;
+}
+
+/* Стили для подвала */
+footer {
+    background-color: #2b2d42;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Подвал всегда внизу */
+    width: 100%;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Вертикальное расположение на малых экранах */
+    }
+    .sidebar {
+        margin-left: 0; /* Убираем отступ слева на маленьких экранах */
+        margin-top: 10px; /* Добавляем отступ сверху */
+        width: 200px; /* Задайте ширину сайдбара для мобильных устройств */
+        
+    }
+}
