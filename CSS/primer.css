@@ -150,4 +150,7 @@ footer {
         width: 20%; /* Задайте ширину сайдбара для мобильных устройств */
         
     }
+    .content {
+    font-size: 1.4em;
+    margin-left: 22%;
 }
