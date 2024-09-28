@@ -1,4 +1,4 @@
-@import 'primer';
+@import './base.scss';
 /* Основные настройки */
 body {
     font-family: Arial, sans-serif;
@@ -25,6 +25,7 @@ header {
     color: white;
     padding: 10px 0;
 }
+
 
 .navbar {
     display: flex;
@@ -75,6 +76,10 @@ header {
     display: block; /* Показать сайдбар при активации */
 }
 
+.sidebar.active ~ .content {
+    margin-left: 24%; /* Смещаем контент вправо, когда сайдбар активен */
+}
+
 .sidebar h3 {
     margin-top: 0;
 }
@@ -96,14 +101,11 @@ header {
     background-color: #968bbe; /* Цвет при наведении */
 }
 
-.sidebar.active ~ .content {
-    margin-left: 24%; /* Смещаем контент вправо, когда сайдбар активен */
-}
 
 /* Стили для основного контента */
 .content {
     font-size: 1.3em;
-    margin-left: 22%;
+    padding: 20px; /* Внутренние отступы для контента */
     flex: 3;
     background-color: #ffffff;
     padding: 25px;
@@ -134,14 +136,7 @@ header {
 }
 
 /* Стили для подвала */
-footer {
-    background-color: #2b2d42;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: auto; /* Подвал всегда внизу */
-    width: 100%;
-}
+@import './footnotes.scss';
 
 /* Адаптивность */
 @media (max-width: 768px) {
@@ -152,10 +147,14 @@ footer {
     .sidebar {
         margin-left: 0; /* Убираем отступ слева на маленьких экранах */
         margin-top: 10px; /* Добавляем отступ сверху */
-        width: 40%; /* Задайте ширину сайдбара для мобильных устройств */
-        
+        width: 300px; /* Задайте ширину сайдбара для мобильных устройств */
     }
+
     .sidebar.active ~ .content {
         margin-left: 0; /* Убираем смещение для мобильных */
+    }
+
+    img {
+        width: 350px;
     }
 }
