@@ -1,1 +1,1 @@
-# reshetnikov.github.io
+https://reshetnikovdv.github.io/resh/
