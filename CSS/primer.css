@@ -96,6 +96,10 @@ header {
     background-color: #968bbe; /* Цвет при наведении */
 }
 
+.sidebar.active ~ .content {
+    margin-left: 24%; /* Смещаем контент вправо, когда сайдбар активен */
+}
+
 /* Стили для основного контента */
 .content {
     font-size: 1.3em;
@@ -143,6 +147,7 @@ footer {
 @media (max-width: 768px) {
     .container {
         flex-direction: column; /* Вертикальное расположение на малых экранах */
+        margin-left: 0; /* Убираем смещение для мобильных */
     }
     .sidebar {
         margin-left: 0; /* Убираем отступ слева на маленьких экранах */
@@ -150,7 +155,7 @@ footer {
         width: 40%; /* Задайте ширину сайдбара для мобильных устройств */
         
     }
-    .content {
-    font-size: 1.5em;
-    margin-left: 26%;
+    .sidebar.active ~ .content {
+        margin-left: 0; /* Убираем смещение для мобильных */
+    }
 }
