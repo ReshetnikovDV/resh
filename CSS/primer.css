@@ -137,6 +137,7 @@ header {
 }
 
 /* Стили для подвала */
+@import './footnotes.scss';
 
 /* Адаптивность */
 @media (max-width: 768px) {
