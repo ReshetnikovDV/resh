@@ -148,7 +148,7 @@ header {
     .sidebar {
         margin-left: 0; /* Убираем отступ слева на маленьких экранах */
         margin-top: 10px; /* Добавляем отступ сверху */
-        width: 300px; /* Задайте ширину сайдбара для мобильных устройств */
+        width: 40%; /* Задайте ширину сайдбара для мобильных устройств */
     }
 
     .sidebar.active ~ .content {
@@ -156,8 +156,7 @@ header {
     }
 
     img {
-        justify-content: center;
-        width: 60%;
-        height: 200px;
+        width: 70%;
+        height: 400px;
     }
 }
